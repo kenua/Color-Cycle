@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="PEPE">
+   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fredoka+One&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <title>ColorCycle</title>
+</head>
+<body>
+   <div id="cycle-content" class="cycle-content">
+      <span id="cycle-color-value">#000000</span>
+   </div>
+   
+   <main class="content">
+      <div class="color-controls">
+         <form>
+            <h2 class="controls__heading">HEXADECIMAL CODE</h2>
+            <div class="controls__fields">
+               <div class="controls__input-container"> <label for="r" class="input__label">R:</label> <input type="text" id="r" maxlength="2" placeholder="00" class="input-container__input act-to-dis"> </div>
+               <div class="controls__input-container"> <label for="g" class="input__label">G:</label> <input type="text" id="g" maxlength="2" placeholder="00" class="input-container__input act-to-dis"> </div>
+               <div class="controls__input-container"> <label for="b" class="input__label">B:</label> <input type="text" id="b" maxlength="2" placeholder="00" class="input-container__input act-to-dis"> </div>
+            </div>
+
+            <h2 class="controls__heading">Increment value by</h2>
+            <div class="controls__fields">
+               <div class="controls__input-container"> <label for="increment-r" class="input__label">R:</label> <input type="number" id="increment-r" placeholder="0-50" max="50" min="1" value="15" class="input-container__input act-to-dis"> </div>
+               <div class="controls__input-container"> <label for="increment-g" class="input__label">G:</label> <input type="number" id="increment-g" placeholder="0-50" max="50" min="1" value="15" class="input-container__input act-to-dis"> </div>
+               <div class="controls__input-container"> <label for="increment-b" class="input__label">B:</label> <input type="number" id="increment-b" placeholder="0-50" max="50" min="1" value="15" class="input-container__input act-to-dis"> </div>
+            </div>
+           
+            <div class="controls__button">
+               <button type="button" class="button" id="toggleTimer">Start</button>
+               <button type="button" class="button button--ghost act-to-dis" id="setColor">Set configuration</button>
+            </div>
+         </form>
+
+      </div><!--.color-controls-->
+   </main>
+
+   <div class="error-container hidden-error-container" id="error-container">
+      <div class="error-container__close-button" id="error-close-button"><button type="button">X</button></div>
+      <h2 class="error__heading" id="error-heading"></h2>
+      <p class="error__body" id="error-body"></p>
+   </div>
+
+   <script src="main.js" type="module"></script>
+</body>
+</html>

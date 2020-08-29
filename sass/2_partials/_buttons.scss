@@ -1,0 +1,34 @@
+.button {
+   font: 1.4rem 'Fredoka One', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   background-color: #0f0f0f;
+   color: #fafafa;
+   margin: 0 1rem 1rem;
+   padding: 1rem 2rem;
+   border: none;
+   border-radius: 10rem;
+   display: inline-block;
+   cursor: pointer;
+   transition: transform 300ms ease;
+
+   &:hover {
+      transform: scale(1.05);}
+
+   @include viewport($tablet-v) {
+      font-size: 1.9rem;
+   }
+}
+
+.button--ghost {
+   background-color: #00000000;
+   color: #0f0f0f;
+   border: 3px solid #0f0f0f;}
+
+.disable-field {
+   opacity: .5;
+   cursor: not-allowed;
+
+   &:hover {
+      transform: none;}
+}
